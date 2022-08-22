@@ -6,4 +6,5 @@
     <string name="start_fragment_question">Что использовать?</string>
     <string name="text_btn_room">Room</string>
     <string name="btn_firebase">Firebase</string>
+    <string name="toolBar_title">Заметки</string>
 </resources>
