@@ -1,18 +1,15 @@
 package com.fox.mynotes.screens.start
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
-import androidx.navigation.findNavController
 import com.fox.mynotes.R
 import com.fox.mynotes.databinding.FragmentStartBinding
 import com.fox.mynotes.utilits.APP_ACTIVITY
 import com.fox.mynotes.utilits.TYPE_ROOM
-import kotlinx.android.synthetic.main.fragment_start.*
 
 class StartFragment : Fragment() {
 
@@ -36,7 +33,7 @@ class StartFragment : Fragment() {
     }
 
     private fun initialization() {
-        mViewModel = ViewModelProvider(this).get(StartFragmentViewModel::class.java)
+        mViewModel = ViewModelProvider(this)[StartFragmentViewModel::class.java]
         binding.btnRoom.setOnClickListener {
             mViewModel.initDatabase(TYPE_ROOM) {
                 APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_mainFragment)
